@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<malloc.h>
+#include<stdlib.h>
+
 typedef struct list
 {
 	int info;
@@ -112,13 +114,13 @@ void insert_aftervalue(NODE *start)
 }
 int main()
 {
-	NODE *start=NULL;
-	createlist(&start);
-	traverse(start);
-	//insert_first(&start);
-	//insert_last(start);
-	//insert_any(&start);
-	insert_aftervalue(start);
+	NODE *head=NULL;
+	createlist(&head);
+	traverse(head);
+	//insert_first(&head);
+	//insert_last(&head);
+	//insert_any(&head);
+	insert_aftervalue(head);
 	printf("\n");
-	traverse(start);
+	traverse(head);
 }
