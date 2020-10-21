@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<malloc.h>
+#include<stdlib.h> //Included one library
+
 typedef struct Node
 {
 	struct Node *left;
@@ -164,6 +166,15 @@ NODE* deleteNode(NODE * root, int key)
     	}
     return root;
 }
+
+int findSize(struct node* node)  
+{   
+  if (node==NULL)  
+    return 0; 
+  else     
+    return(size(node->left) + 1 + size(node->right));   
+} 
+
 int main()
 {
 	NODE *p=NULL;
@@ -175,7 +186,7 @@ int main()
 	preorder(p);
 	printf("\n");
 	postorder(p);
-    //	printf("\nSize of Tree = %d",FindSize(p));
+    	printf("\nSize of Tree = %d",findSize(p));
     printf("\nEnter value to serach : ");
     scanf("%d",&n);
     temp=search(p,n);
