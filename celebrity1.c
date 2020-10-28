@@ -1,5 +1,6 @@
 #include<stdio.h>
  int main(){
+	 printf("Hello");
     int n,i,j,count,pos;
     printf("\nEnter number of person: ");
     scanf("%d",&n);
