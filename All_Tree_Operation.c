@@ -177,6 +177,7 @@ int findSize(struct node* node)
 
 int main()
 {
+	printf("Welcome to tree operations:-\n");
 	NODE *p=NULL;
 	int n;
 	NODE *temp;
